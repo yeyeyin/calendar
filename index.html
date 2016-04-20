@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<meta http-equic="content-type" content="text/html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>日历</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload = "initial()">
+	<!-- 整个日历 -->
+	<div class="calendarMain"> 
+		<table id="calendarMain">
+			<!-- 首行/表头 -->
+			<tr class="mainRow1">
+				<td>	<!-- 年份变化 -->
+					<div id="lastYear" onclick="pushBtm('YU')"> << </div>
+				</td>
+				<td>	<!-- 月份变化-->
+					<div id="lastMonth" onclick="pushBtm('MU')"> < </div>
+				</td>
+				<td colspan = "3">
+					<!-- 年下拉列表-->
+					<select name = "year" id="changeYear" onchange ="changeCld()">
+						<option>1900</option>
+			            <option>1901</option>
+			            <option>1902</option>
+			            <option>1903</option>
+			            <option>1904</option>
+			            <option>1905</option>
+			            <option>1906</option>
+			            <option>1907</option>
+			            <option>1908</option>
+			            <option>1909</option>
+			            <option>1910</option>
+			            <option>1911</option>
+			            <option>1912</option>
+			            <option>1913</option>
+			            <option>1914</option>
+			            <option>1915</option>
+			            <option>1916</option>
+			            <option>1917</option>
+			            <option>1918</option>
+			            <option>1919</option>
+			            <option>1920</option>
+			            <option>1921</option>
+			            <option>1922</option>
+			            <option>1923</option>
+			            <option>1924</option>
+			            <option>1925</option>
+			            <option>1926</option>
+			            <option>1927</option>
+			            <option>1928</option>
+			            <option>1929</option>
+			            <option>1930</option>
+			            <option>1931</option>
+			            <option>1932</option>
+			            <option>1933</option>
+			            <option>1934</option>
+			            <option>1935</option>
+			            <option>1936</option>
+			            <option>1937</option>
+			            <option>1938</option>
+			            <option>1939</option>
+			            <option>1940</option>
+			            <option>1941</option>
+			            <option>1942</option>
+			            <option>1943</option>
+			            <option>1944</option>
+			            <option>1945</option>
+			            <option>1946</option>
+			            <option>1947</option>
+			            <option>1948</option>
+			            <option>1949</option>
+			            <option>1950</option>
+			            <option>1951</option>
+			            <option>1952</option>
+			            <option>1953</option>
+			            <option>1954</option>
+			            <option>1955</option>
+			            <option>1956</option>
+			            <option>1957</option>
+			            <option>1958</option>
+			            <option>1959</option>
+			            <option>1960</option>
+			            <option>1961</option>
+			            <option>1962</option>
+			            <option>1963</option>
+			            <option>1964</option>
+			            <option>1965</option>
+			            <option>1966</option>
+			            <option>1967</option>
+			            <option>1968</option>
+			            <option>1969</option>
+			            <option>1970</option>
+			            <option>1971</option>
+			            <option>1972</option>
+			            <option>1973</option>
+			            <option>1974</option>
+			            <option>1975</option>
+			            <option>1976</option>
+			            <option>1977</option>
+			            <option>1978</option>
+			            <option>1979</option>
+			            <option>1980</option>
+			            <option>1981</option>
+			            <option>1982</option>
+			            <option>1983</option>
+			            <option>1984</option>
+			            <option>1985</option>
+			            <option>1986</option>
+			            <option>1987</option>
+			            <option>1988</option>
+			            <option>1989</option>
+			            <option>1990</option>
+			            <option>1991</option>
+			            <option>1992</option>
+			            <option>1993</option>
+			            <option>1994</option>
+			            <option>1995</option>
+			            <option>1996</option>
+			            <option>1997</option>
+			            <option>1998</option>
+			            <option>1999</option>
+			            <option>2000</option>
+			            <option>2001</option>
+			            <option>2002</option>
+			            <option>2003</option>
+			            <option>2004</option>
+			            <option>2005</option>
+			            <option>2006</option>
+			            <option>2007</option>
+			            <option>2008</option>
+			            <option>2009</option>
+			            <option>2010</option>
+			            <option>2011</option>
+			            <option>2012</option>
+			            <option>2013</option>
+			            <option>2014</option>
+			            <option>2015</option>
+			            <option>2016</option>
+			            <option>2017</option>
+			            <option>2018</option>
+			            <option>2019</option>
+			            <option>2020</option>
+			            <option>2021</option>
+			            <option>2022</option>
+			            <option>2023</option>
+			            <option>2024</option>
+			            <option>2025</option>
+			            <option>2026</option>
+			            <option>2027</option>
+			            <option>2028</option>
+			            <option>2029</option>
+			            <option>2030</option>
+			            <option>2031</option>
+			            <option>2032</option>
+			            <option>2033</option>
+			            <option>2034</option>
+			            <option>2035</option>
+			            <option>2036</option>
+			            <option>2037</option>
+			            <option>2038</option>
+			            <option>2039</option>
+			            <option>2040</option>
+			            <option>2041</option>
+			            <option>2042</option>
+			            <option>2043</option>
+			            <option>2044</option>
+			            <option>2045</option>
+			            <option>2046</option>
+			            <option>2047</option>
+			            <option>2048</option>
+			            <option>2049</option>
+					</select>
+					<span class="change">年</span>
+					<!-- 月下拉列表 -->
+					<select name = "month" id="changeMonth" onchange="changeCld()">
+						<option>1</option>
+						<option>2</option>
+			        	<option>3</option>
+			        	<option>4</option>
+			        	<option>5</option>
+			         	<option>6</option>
+			        	<option>7</option>
+			        	<option>8</option>
+			         	<option>9</option>
+			          	<option>10</option>
+			          	<option>11</option>
+			          	<option>12</option>
+					</select>
+					<span class="change">月</span>
+				</td>
+				<td>    <!-- 月份变化-->
+					<div id="nextMonth" onclick="pushBtm('MD')"> >  </div>
+				</td>
+				<td>	<!-- 年份变化-->
+					<div id="nextYear" onclick="pushBtm('YD')"> >> </div>
+				</td>
+			</tr>
+			<!-- 星期表头 -->
+			<tr class="mainRow2">
+				<table class="week">
+					<tr>
+						<td>日</td>
+						<td>一</td>
+						<td>二</td>
+						<td>三</td>
+						<td>四</td>
+						<td>五</td>
+						<td>六</td>
+					</tr>
+				</table>
+			</tr>
+			<!-- 日期填充 -->
+			<tr class="mainRow3">
+				<table class="days">
+					<!-- 第一周 -->
+					<tr class="row1">
+						<td onclick ="todayNote(1)">
+							<div class="r1c1"  >
+								<a class="today"  href="note.html">
+									<span class="gre" id="d1_gre"></span>
+									<span class="cn"  id="d1_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(2)">
+							<div class="r1c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d2_gre"></span>
+									<span class="cn"  id="d2_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(3)">
+							<div class="r1c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d3_gre"></span>
+									<span class="cn"  id="d3_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(4)">
+							<div class="r1c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d4_gre"></span>
+									<span class="cn"  id="d4_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(5)">
+							<div class="r1c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d5_gre"></span>
+									<span class="cn"  id="d5_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(6)">
+							<div class="r1c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d6_gre"></span>
+									<span class="cn"  id="d6_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td  onclick ="todayNote(7)" >
+							<div class="r1c7">
+								<a class="today" href="note.html">
+									<span class="gre" id="d7_gre"></span>
+									<span class="cn"  id="d7_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<!-- 第二周 -->
+					<tr class="row2">
+						<td onclick ="todayNote(8)">
+							<div class="r2c1">
+								<a class="today" href="note.html">
+									<span class="gre" id="d8_gre"></span>
+									<span class="cn"  id="d8_cn"></span>
+								</a>
+							</div>
+						</td>
+
+						<td onclick ="todayNote(9)">
+							<div class="r2c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d9_gre"></span>
+									<span class="cn"  id="d9_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(10)">
+							<div class="r2c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d10_gre"></span>
+									<span class="cn"  id="d10_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(11)">
+							<div class="r2c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d11_gre"></span>
+									<span class="cn"  id="d11_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(12)">
+							<div class="r2c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d12_gre"></span>
+									<span class="cn"  id="d12_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(13)">
+							<div class="r2c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d13_gre"></span>
+									<span class="cn"  id="d13_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(14)">
+							<div class="r2c7">
+								<a class="today" href="note.html">
+									<span class="gre" id="d14_gre"></span>
+									<span class="cn"  id="d14_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<!-- 第三周 -->
+					<tr class="row3">
+						<td onclick ="todayNote(15)">
+							<div class="r3c1">
+								<a class="today" href="note.html">
+									<span class="gre" id="d15_gre"></span>
+									<span class="cn"  id="d15_cn"></span>
+								</a>
+							</div>
+						</td>
+
+						<td onclick ="todayNote(16)">
+							<div class="r3c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d16_gre"></span>
+									<span class="cn"  id="d16_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(17)">
+							<div class="r3c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d17_gre"></span>
+									<span class="cn"  id="d17_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(18)">
+							<div class="r3c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d18_gre"></span>
+									<span class="cn"  id="d18_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(19)">
+							<div class="r3c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d19_gre"></span>
+									<span class="cn"  id="d19_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(20)">
+							<div class="r3c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d20_gre"></span>
+									<span class="cn"  id="d20_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(21)">
+							<div class="r3c7">
+								<a class="today" href="note.html">
+									<span class="gre" id="d21_gre"></span>
+									<span class="cn"  id="d21_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<!-- 第四周 -->
+					<tr class="row4">
+						<td onclick ="todayNote(22)">
+							<div class="r4c1">
+								<a class="today" href="note.html">
+									<span class="gre" id="d22_gre"></span>
+									<span class="cn"  id="d22_cn"></span>
+								</a>
+							</div>
+						</td>
+
+						<td onclick ="todayNote(23)">
+							<div class="r4c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d23_gre"></span>
+									<span class="cn"  id="d23_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(24)">
+							<div class="r4c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d24_gre"></span>
+									<span class="cn"  id="d24_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(25)">
+							<div class="r4c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d25_gre"></span>
+									<span class="cn"  id="d25_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(26)">
+							<div class="r4c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d26_gre"></span>
+									<span class="cn"  id="d26_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(27)">
+							<div class="r4c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d27_gre"></span>
+									<span class="cn"  id="d27_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(28)">
+							<div class="r4c7">
+								<a class="today" href="note.html">
+									
+									<span class="gre" id="d28_gre"></span>
+									<span class="cn"  id="d28_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<!-- 第五周 -->
+					<tr class="row5">
+						<td onclick ="todayNote(29)">
+							<div class="r5c1">
+								<a class="today" href="note.html">
+									<span class="gre" id="d29_gre"></span>
+									<span class="cn"  id="d29_cn"></span>
+								</a>
+							</div>
+						</td>
+
+						<td onclick ="todayNote(30)">
+							<div class="r5c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d30_gre"></span>
+									<span class="cn"  id="d30_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(31)">
+							<div class="r5c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d31_gre"></span>
+									<span class="cn"  id="d31_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(32)">
+							<div class="r5c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d32_gre"></span>
+									<span class="cn"  id="d32_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(33)">
+							<div class="r5c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d33_gre"></span>
+									<span class="cn"  id="d33_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(34)">
+							<div class="r5c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d34_gre"></span>
+									<span class="cn"  id="d34_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(35)">
+							<div class="r5c7">
+								<a class="today" href="note.html">
+									<span class="gre" id="d35_gre"></span>
+									<span class="cn"  id="d35_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<!-- 第六周 -->
+					<tr class="row6">
+						<td onclick ="todayNote(36)">
+							<div class="r6c1">
+								<a class="today" href="note.html">
+									<span class="gre" id="d36_gre"></span>
+									<span class="cn"  id="d36_cn"></span>
+								</a>
+							</div>
+						</td>
+
+						<td onclick ="todayNote(37)">
+							<div class="r6c2">
+								<a class="today" href="note.html">
+									<span class="gre" id="d37_gre"></span>
+									<span class="cn"  id="d37_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(38)">
+							<div class="r6c3">
+								<a class="today" href="note.html">
+									<span class="gre" id="d38_gre"></span>
+									<span class="cn"  id="d38_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(39)">
+							<div class="r6c4">
+								<a class="today" href="note.html">
+									<span class="gre" id="d39_gre"></span>
+									<span class="cn"  id="d39_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(40)">
+							<div class="r6c5">
+								<a class="today" href="note.html">
+									<span class="gre" id="d40_gre"></span>
+									<span class="cn"  id="d40_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(41)">
+							<div class="r6c6">
+								<a class="today" href="note.html">
+									<span class="gre" id="d41_gre"></span>
+									<span class="cn"  id="d41_cn"></span>
+								</a>
+							</div>
+						</td>
+						<td onclick ="todayNote(42)">
+							<div class="r6c7">
+								<a class="today" href="note.html">
+									<span class="gre" id="d42_gre"></span>
+									<span class="cn"  id="d42_cn"></span>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</tr>
+			<!-- 农历、返回今日、查看备注单 -->
+			<tr>
+				<div class="footer">
+				<td colspan = "3"><span id="cn_year">&nbsp;</span>
+				</td>
+				<div class="addButton">
+				<td>
+					<button type="button" id="today" onclick="initial()">今天</button>
+				</td>	
+				<td>
+					<a href="note.html"><button type="button" id="note">备注单</button></a>
+				</td>
+			</div>
+				</div>		
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+</body>
+</html>
